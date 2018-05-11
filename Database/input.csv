@@ -1,0 +1,93 @@
+Breakfast ,CARB,,,
+Food Name,Protein (g),Fat (g),Carbohydrates (g),Calories
+Potato,2.05,0.09,17.49,77
+"Bread(Wheat),12.96,4.27,55.77,313
+Oats,16.89,6.9,66.27,389
+Wheat&Milk ,14,1.5,71,369
+,PROTIEN,,,
+Milk(Fullcream),3.28,3.66,4.65,64
+Yogurt,5.25,1.55,7.04,63
+Egg ,12.56,9.51,0.72,143
+,FAT,,,
+Olive oil ,0,100,0,884
+Avocados,2,14.66,8.53,160
+Almonds,21.15,49.93,21.55,579
+Walnuts,14.29,60.71,17.86,643
+Peanuts,20.04,53.95,21.05,607
+,,,,
+lunch,CARB,,,
+Food Name,Protein (g),Fat (g),Carbohydrates (g),Calories
+Rice,7.5,2.68,76.17,362
+Pasta,7.46,2.08,79.26,357
+Spaghetti,13.35,1.57,74.81,372
+,PROTIEN,,,
+""Chicken,breast "",28.04,3.57,0,144
+""Beef, steak "",28.97,17.37,0,280
+""Fish, tuna"",23.33,4.9,0,144
+""Fish, salmon"",18.28,4.32,0,117
+""Fish, tilapia"",26.15,2.65,0,128
+,FAT,,,
+olive oil ,0,100,0,884
+Avocados,2,14.66,8.53,160
+Almonds,21.15,49.93,21.55,579
+walnuts,14.29,60.71,17.86,643
+peanuts,20.04,53.95,21.05,607
+,Vegatbles ,,,
+Carrot,0.93,0.24,9.58,41
+Spinach,2.86,0.39,3.63,23
+Tomatoe,1.2,0.2,5.1,23
+Cucumber,0.65,0.11,3.63,15
+,,,,
+Dinner,Vegatbles,(NO CARB),,
+Carrot,0.93,0.24,9.58,41
+Spinach,2.86,0.39,3.63,23
+Tomatoe,1.2,0.2,5.1,23
+Cucumber,0.65,0.11,3.63,15
+,,,,
+,PROTIEN,,,
+""Cheese, cottage"",10.69,3.85,4.61,97
+""Milk, full cream "",3.28,3.66,4.65,64
+Yogurt,5.25,1.55,7.04,63
+,FAT,,,
+olive oil ,0,100,0,884
+Avocados,2,14.66,8.53,160
+Almonds,21.15,49.93,21.55,579
+walnuts,14.29,60.71,17.86,643
+peanuts,20.04,53.95,21.05,607
+,,,,
+snack,CARB,,,
+Sweet potato,2.01,0.15,20.71,90
+""Bread, wheat"",12.96,4.27,55.77,313
+Oats,16.89,6.9,66.27,389
+,PROTIEN,,,
+Yogurt,5.25,1.55,7.04,63
+""Fish, tuna"",23.33,4.9,0,144
+""Fish, salmon"",18.28,4.32,0,117
+Peanut butter,24.06,49.94,21.57,589
+,FAT,,,
+olive oil ,0,100,0,884
+Avocados,2,14.66,8.53,160
+Almonds,21.15,49.93,21.55,579
+walnuts,14.29,60.71,17.86,643
+peanuts,20.04,53.95,21.05,607
+,Fruits,,,
+Orange,0.94,0.12,11.75,47
+Apple,0.26,0.17,13.81,52
+Bananas,1.09,0.33,22.84,89
+Strawberries,0.67,0.3,7.68,32
+Watermelon,0.61,0.15,7.55,30
+Mango,0.82,0.38,14.98,60
+,,,,
+Drink 1,,,,
+""Beverages, coffee"",12.2,0.5,75.4,353
+green tea,0,0.18,7.16,30
+Lemonade fruit juice ,0,0,5,21
+Apple juice,0,0.1,5.1,22
+,,,,
+,,,,
+Drink 2,,,,
+""Beverages, coffee"",12.2,0.5,75.4,353
+green tea,0,0.18,7.16,30
+Lemonade fruit juice ,0,0,5,21
+Apple juice,0,0.1,5.1,22
+"
