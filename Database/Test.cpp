@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "Menu.hpp"
+#include <stdlib.h>
 
 int main()
 {

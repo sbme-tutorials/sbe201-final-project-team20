@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <stdlib.h>
+
 
 //Declaring global variables
 std::string meal;
@@ -22,7 +22,7 @@ void breakfast()
     while (bfone >> meal >> protein >> calorie)
     {
         //menu out on screen
-
+        
         std::cout << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
@@ -39,7 +39,7 @@ void breakfast()
 
     while (bftwo >> meal >> protein >> calorie)
     {
-
+        
         std::cout << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
