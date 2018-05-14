@@ -1,18 +1,18 @@
 #include <iostream>
 #include "arrays.hpp"
 #include <array>
-void printAll(std::array<std::array<int, 16>, 16> array, int W, int N)
+void printAll(std::array<std::array<int, 4>, 4> array, int W, int N)
 {
-    for (int i = 0; i <= 16; i++)
+    for (int i = 0; i <= 4; i++)
     {
-        for (int j = 0; j <= 16; j++)
+        for (int j = 0; j <= 4; j++)
         {
             std::cout << array[W][N] << std::endl;
         }
        std::cout<<" "<< std::endl;
     }
 }
-std::array<std::array<int, 16>, 16> SetRows_Columns(std::array<std::array<int, 16>, 16> &array, int W, int N)
+std::array<std::array<int, 4>, 4> SetRows_Columns(std::array<std::array<int, 4>, 4> &array, int W, int N)
 {
     int n = 0;
     int w = 0;
@@ -37,9 +37,9 @@ int main()
     std::cout<<a;
     map::insert(mapp, "protien",15,17);
     map::printAll(mapp);*/
-    std::array<std::array<int, 16>, 16> array;
-    SetRows_Columns(array, 16, 16);
-    printAll(array, 16, 16);
+    std::array<std::array<int, 4>, 4> array;
+    SetRows_Columns(array, 4, 4);
+    printAll(array, 4,4);
 
     return 0;
 }
