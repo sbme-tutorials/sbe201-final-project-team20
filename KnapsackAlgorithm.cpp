@@ -38,6 +38,19 @@ int maxi(std::array<std::array<int, 4>, 6> &array)
     }
     return max;
 }
+void pick(std::array<std::array<int, 4>, 6> &array,std::array<int, 3> w, int items, int capacity)
+{
+    if (items <= 0 || capacity <= 0) return;
+ 
+    int k = array[items][capacity];
+    if (k != array[items - 1][capacity]) {
+        std::cout << items<< " "; 
+        pick((items-1, capacity-w[items]),w,items,capacity);
+    } else {
+       
+        pick((items-1, capacity-w[items]),w,items,capacity);
+    }
+}
 int main()
 {
 
@@ -59,5 +72,6 @@ int main()
         std::cout << std::endl;
     }
 std::cout<<maxi(array)<<std::endl;
+pick(array,w,items,capacity);
     return 0;
 }
