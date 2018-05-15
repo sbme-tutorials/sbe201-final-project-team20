@@ -26,4 +26,4 @@ sbe201-final-project-team20 created by GitHub Classroom
 
 
 ###GUI First trial
-![gooey](Screenshot from 2018-05-16 00-40-16.png)
+![gooey](gui.png)
