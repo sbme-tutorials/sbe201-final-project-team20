@@ -1,7 +1,7 @@
 #include <iostream>
 #include <array>
 #include <cmath>
-int getmaxi(std::array<std::array<int, 4>, 6> &array, std::array<int, 3> val, std::array<int, 3> w, int items, int capacity)
+int getmaxim(std::array<std::array<int, 4>, 6> &array, std::array<int, 3> val, std::array<int, 3> w, int items, int capacity)
 {
     int i;
     int j;
@@ -22,8 +22,7 @@ int getmaxi(std::array<std::array<int, 4>, 6> &array, std::array<int, 3> val, st
                 array[i][j] = std::max(array[i - 1][j], val[i - 1] + array[i - 1][j - w[i - 1]]);
         }
     }
-    int x=array[items][capacity];
-    return x;
+return 5;
 }
 int main()
 {
@@ -35,7 +34,8 @@ int main()
 
     int items = 4;
     int capacity = 6;
-    std::cout << getmaxi(array, val, w, items, capacity) << std::endl;
+
+   std::cout<<getmaxim(array, val, w, items, capacity) << std::endl;
     for (int i = 0; i < 4; i++)
     {
         for (int j = 0; j < 6; j++)
@@ -44,6 +44,8 @@ int main()
         }
         std::cout << std::endl;
     }
-
+std::array<std::array<int, 2>, 2> array1;
+array1={{{2,1},{2,8}}};
+std::cout<<array1[2][2];
     return 0;
 }
