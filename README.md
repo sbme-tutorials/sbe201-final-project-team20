@@ -23,3 +23,7 @@ sbe201-final-project-team20 created by GitHub Classroom
 - Redirected to use the knapsack problem and its solution as our main application algorithm.
 - Rethinking strategies and passing already built parameters to its equivalent parameters in the knapsack algorithm.
 - Successfully testing the algorithm.
+
+
+###GUI First trial
+![gooey](gui.png)
