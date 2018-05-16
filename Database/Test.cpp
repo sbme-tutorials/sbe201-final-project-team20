@@ -34,22 +34,28 @@ int main()
     switch (choice)
     {
     case 1:
-        breakfast();
+        displayBreakfast();
+        selectedFood(1);
         break;
     case 2:
-        lunch();
+        displayLunch();
+        selectedFood(2);
         break;
     case 3:
-        dinner();
+        displayDinner();
+        selectedFood(3);
         break;
     case 4:
-        vegetables();
+        displayVegetables();
+        selectedFood(4);
         break;
     case 5:
-        fruits();
+        displayFruits();
+        selectedFood(5);
         break;
     case 6:
-        drinks();
+        displayDrinks();
+        selectedFood(6);
         break;
     }
 }
