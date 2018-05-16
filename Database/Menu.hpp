@@ -3,9 +3,10 @@
 #include <map>
 #include <string>
 #include <iterator>
-
+#include <vector>
 //Declaring global variables
 std::string meal;
+std::vector <double> benefit;
 double protein, calorie;
 struct food
 {
@@ -29,12 +30,13 @@ void displayBreakfast()
     while (bfone >> meal >> protein >> calorie)
     {
         //menu out on screen
-
         std::cout << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
+        benefit.push_back(protein);
         std::cout << "Calories " << calorie << '\n';
         std::cout << "-------------------" << '\n';
     }
+    std::cout<<benefit.size()<<std::endl;
     //close file
     bfone.close();
 
@@ -49,6 +51,7 @@ void displayBreakfast()
 
         std::cout << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
+        benefit.push_back(protein);
         std::cout << "Calories " << calorie << '\n';
         std::cout << "-------------------" << '\n';
     }
@@ -66,9 +69,11 @@ void displayBreakfast()
 
         std::cout << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
+        benefit.push_back(protein);
         std::cout << "Calories " << calorie << '\n';
         std::cout << "-------------------" << '\n';
     }
+    std::cout<<benefit.size()<<std::endl;
     //close file
     bfthree.close();
 }
