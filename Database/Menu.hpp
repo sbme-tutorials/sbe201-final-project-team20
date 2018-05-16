@@ -1,14 +1,21 @@
 #include <iostream>
 #include <fstream>
-
+#include <map>
+#include <string>
+#include <iterator>
 
 //Declaring global variables
 std::string meal;
 double protein, calorie;
+struct food
+{
+    std::string foodie;
+    double proteine, caloriee;
+};
 
 //Breakfast menu call
 
-void breakfast()
+void displayBreakfast()
 {
 
     //opening file
@@ -22,7 +29,7 @@ void breakfast()
     while (bfone >> meal >> protein >> calorie)
     {
         //menu out on screen
-        
+
         std::cout << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
@@ -39,7 +46,7 @@ void breakfast()
 
     while (bftwo >> meal >> protein >> calorie)
     {
-        
+
         std::cout << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
@@ -67,7 +74,7 @@ void breakfast()
 }
 
 //Lunch menu call
-void lunch()
+void displayLunch()
 {
     //opening file
     std::ifstream lunchOne("Lunch1.csv");
@@ -119,7 +126,7 @@ void lunch()
 }
 
 //Dinner menu call
-void dinner()
+void displayDinner()
 {
 
     //opening file
@@ -177,7 +184,7 @@ void dinner()
     dinnerThree.close();
 }
 
-void vegetables()
+void displayVegetables()
 {
     std::ifstream Vegeta("Vegetables.csv");
 
@@ -196,7 +203,7 @@ void vegetables()
     Vegeta.close();
 }
 
-void fruits()
+void displayFruits()
 {
     std::ifstream Fruit("Fruits.csv");
 
@@ -215,7 +222,7 @@ void fruits()
     Fruit.close();
 }
 
-void drinks()
+void displayDrinks()
 {
     std::ifstream drink("Drinks.csv");
 
@@ -232,4 +239,34 @@ void drinks()
     }
     //close file
     drink.close();
+}
+
+void selectedFood(int x)
+{
+    if (x == 1)
+    {
+        std::ifstream bfone("Breakfast1.csv");
+
+        //File opened successfully ?
+        if (!bfone.is_open())
+            std::cout << "ERROR: File Open" << '\n';
+
+        std::string selected;
+        std::cout << "Enter desired food and type Done after you finish" << std::endl;
+        std::cin >> selected;
+        while (bfone >> meal >> protein >> calorie)
+        {
+            if (selected == meal)
+            {
+                food firstmeal;
+                firstmeal.foodie=meal;
+                firstmeal.proteine=protein;
+                firstmeal.caloriee=calorie;
+                 std::cout << firstmeal.foodie << firstmeal.proteine << firstmeal.caloriee;
+            }
+        }
+        //close file
+        bfone.close();
+       
+    }
 }
