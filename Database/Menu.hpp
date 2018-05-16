@@ -241,6 +241,9 @@ void displayDrinks()
     drink.close();
 }
 
+
+
+//SelectedFood Function
 void selectedFood(int x)
 {
     if (x == 1)
@@ -266,6 +269,8 @@ void selectedFood(int x)
                 firstmeal.caloriee = calorie;
                 std::cout << firstmeal.foodie << " " << firstmeal.proteine << " " << firstmeal.caloriee;
             }
+            while (bfone >> meal >> protein >> calorie)
+        {
             if (selected2 == meal)
             {
                 food secondmeal;
@@ -274,6 +279,9 @@ void selectedFood(int x)
                 secondmeal.caloriee = calorie;
                 std::cout << secondmeal.foodie << " " << secondmeal.proteine << " " << secondmeal.caloriee;
             }
+        }
+            while (bfone >> meal >> protein >> calorie)
+        {
             if (selected3 == meal)
             {
                 food thirdmeal;
@@ -282,8 +290,8 @@ void selectedFood(int x)
                 thirdmeal.caloriee = calorie;
                 std::cout << thirdmeal.foodie << " " << thirdmeal.proteine << " " << thirdmeal.caloriee;
             }
-            else
-                break;
+        }
+            
         }
         //close file
         bfone.close();
