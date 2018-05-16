@@ -251,22 +251,115 @@ void selectedFood(int x)
         if (!bfone.is_open())
             std::cout << "ERROR: File Open" << '\n';
 
-        std::string selected;
-        std::cout << "Enter desired food and type Done after you finish" << std::endl;
-        std::cin >> selected;
+        std::string selected1, selected2, selected3;
+        std::cout << "Enter desired 3 meals" << std::endl;
+        std::cin >> selected1;
+        std::cin >> selected2;
+        std::cin >> selected3;
         while (bfone >> meal >> protein >> calorie)
         {
-            if (selected == meal)
+            if (selected1 == meal)
             {
                 food firstmeal;
-                firstmeal.foodie=meal;
-                firstmeal.proteine=protein;
-                firstmeal.caloriee=calorie;
-                 std::cout << firstmeal.foodie << firstmeal.proteine << firstmeal.caloriee;
+                firstmeal.foodie = meal;
+                firstmeal.proteine = protein;
+                firstmeal.caloriee = calorie;
+                std::cout << firstmeal.foodie << " " << firstmeal.proteine << " " << firstmeal.caloriee;
             }
+            if (selected2 == meal)
+            {
+                food secondmeal;
+                secondmeal.foodie = meal;
+                secondmeal.proteine = protein;
+                secondmeal.caloriee = calorie;
+                std::cout << secondmeal.foodie << " " << secondmeal.proteine << " " << secondmeal.caloriee;
+            }
+            if (selected3 == meal)
+            {
+                food thirdmeal;
+                thirdmeal.foodie = meal;
+                thirdmeal.proteine = protein;
+                thirdmeal.caloriee = calorie;
+                std::cout << thirdmeal.foodie << " " << thirdmeal.proteine << " " << thirdmeal.caloriee;
+            }
+            else
+                break;
         }
         //close file
         bfone.close();
-       
+
+        std::ifstream bftwo("Breakfast2.csv");
+
+        if (!bftwo.is_open())
+            std::cout << "ERROR: File Open" << '\n';
+
+        while (bfone >> meal >> protein >> calorie)
+        {
+            if (selected1 == meal)
+            {
+                food firstmeal;
+                firstmeal.foodie = meal;
+                firstmeal.proteine = protein;
+                firstmeal.caloriee = calorie;
+                std::cout << firstmeal.foodie << " " << firstmeal.proteine << " " << firstmeal.caloriee;
+            }
+            if (selected2 == meal)
+            {
+                food secondmeal;
+                secondmeal.foodie = meal;
+                secondmeal.proteine = protein;
+                secondmeal.caloriee = calorie;
+                std::cout << secondmeal.foodie << " " << secondmeal.proteine << " " << secondmeal.caloriee;
+            }
+            if (selected3 == meal)
+            {
+                food thirdmeal;
+                thirdmeal.foodie = meal;
+                thirdmeal.proteine = protein;
+                thirdmeal.caloriee = calorie;
+                std::cout << thirdmeal.foodie << " " << thirdmeal.proteine << " " << thirdmeal.caloriee;
+            }
+            else
+                break;
+        }
+        //close file
+        bftwo.close();
+
+        std::ifstream bfthree("Breakfast3.csv");
+
+        if (!bfthree.is_open())
+            std::cout << "ERROR: File Open" << '\n';
+
+        while (bfthree >> meal >> protein >> calorie)
+        {
+            if (selected1 == meal)
+            {
+                food firstmeal;
+                firstmeal.foodie = meal;
+                firstmeal.proteine = protein;
+                firstmeal.caloriee = calorie;
+                std::cout << firstmeal.foodie << " " << firstmeal.proteine << " " << firstmeal.caloriee;
+            }
+            if (selected2 == meal)
+            {
+                food secondmeal;
+                secondmeal.foodie = meal;
+                secondmeal.proteine = protein;
+                secondmeal.caloriee = calorie;
+                std::cout << secondmeal.foodie << " " << secondmeal.proteine << " " << secondmeal.caloriee;
+            }
+            if (selected3 == meal)
+            {
+                food thirdmeal;
+                thirdmeal.foodie = meal;
+                thirdmeal.proteine = protein;
+                thirdmeal.caloriee = calorie;
+                std::cout << thirdmeal.foodie << " " << thirdmeal.proteine << " " << thirdmeal.caloriee;
+            }
+            else
+                break;
+        }
+        //close file
+        bfthree.close();
     }
 }
