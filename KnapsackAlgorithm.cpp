@@ -95,5 +95,21 @@ int main()
 std::cout<<maxi(array)<<std::endl;
 /*pick(array,w,items,capacity);
 wanted (array,items,w,capacity);*/
+  std::string stringo;
+    int q, p, u, r;
+    std::cout << "enter" << std::endl;
+    std::cin >> q;
+    values.push_back(q);
+    std::cout << "wanna more yes" << std::endl;
+
+    std::cin >> stringo;
+
+    if (std::string{"yes"}.compare(stringo) == 0)
+    {
+        std::cin >> p;
+        values.push_back(p);
+    }
+
+    std::cout << values.size()<<std::endl;
     return 0;
 }
