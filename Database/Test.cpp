@@ -35,7 +35,7 @@ int main()
     {
     case 1:
         displayBreakfast();
-        selectedFood(1);
+        
         break;
     case 2:
         displayLunch();
