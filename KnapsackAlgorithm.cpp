@@ -1,7 +1,8 @@
 #include <iostream>
 #include <array>
 #include <cmath>
-void getmaxim(std::array<std::array<int, 4>, 6> &array, std::array<int, 3> val, std::array<int, 3> w, int items, int capacity)
+#include <vector>
+void knapsack(std::array<std::array<int, 4>, 6> &array, std::array<int, 3> val, std::array<int, 3> w, int items, int capacity)
 {
     int i;
     int j;
@@ -30,48 +31,26 @@ int maxi(std::array<std::array<int, 4>, 6> &array)
     {
         for (int j = 0; j < 6; j++)
         {
-            if (array[i][j] >max)
+            if (array[i][j] > max)
             {
-               max = array[i][j];
+                max = array[i][j];
             }
         }
     }
     return max;
 }
-/*void pick(std::array<std::array<int, 4>, 6> &array,std::array<int, 3> w, int items, int capacity)
+void itemss(std::array<std::array<int, 4>, 6> &array, std::array<int, 3> w, int capacity)
 {
-    if (items <= 0 || capacity <= 0) return;
- 
-    int k = array[items][capacity];
-    if (k != array[items - 1][capacity]) {
-        std::cout << items<< " "; 
-        pick((items-1, capacity-w[items]),w,items,capacity);
-    } else {
-       
-        pick((items-1, capacity-w[items]),w,items,capacity);
-    }
-    void wanted(std::array<std::array<int, 4>, 6> array, int items, std::array<int, 3> w, int capacity)
-{
-    int i = items;
     int j = capacity;
-    while (i >= items)
+    for (int i = 4; i > 0; i--)
     {
-        if (array[i][j] == array[i - 1][j]) //not selected
-        {
-            i = i - 1;
-            j = j;
-        }
+        if (array[i][j] == array[i - 1][j]) //do nothing
+            int set = 0;
         else if (array[i][j] > array[i - 1][j])
-        {
-            std::cout << "item" << i << "is selected" << std::endl;
-            j = j - w[i];
-            i = i - 1;
-        }
-        else
-            std::cout << "failed" << std::endl;
+            std::cout<< "item =" << i << std::endl;
+        j = j - w[i];
     }
 }
-}*/
 int main()
 {
 
@@ -83,7 +62,7 @@ int main()
     int items = 4;
     int capacity = 6;
 
-   getmaxim(array, val, w, items, capacity);
+    knapsack(array, val, w, items, capacity);
     for (int i = 0; i < 4; i++)
     {
         for (int j = 0; j < 6; j++)
@@ -92,10 +71,12 @@ int main()
         }
         std::cout << std::endl;
     }
-std::cout<<maxi(array)<<std::endl;
-/*pick(array,w,items,capacity);
+    std::cout << maxi(array) << std::endl;
+    itemss(array,w,capacity);
+    /*pick(array,w,items,capacity);
 wanted (array,items,w,capacity);*/
-  std::string stringo;
+    /*std::string stringo;
+    std::vector<int> values;
     int q, p, u, r;
     std::cout << "enter" << std::endl;
     std::cin >> q;
@@ -110,6 +91,6 @@ wanted (array,items,w,capacity);*/
         values.push_back(p);
     }
 
-    std::cout << values.size()<<std::endl;
+    std::cout << values.size() << std::endl;*/
     return 0;
 }
