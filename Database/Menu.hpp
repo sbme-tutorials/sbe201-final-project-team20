@@ -6,7 +6,8 @@
 #include <vector>
 //Declaring global variables
 std::string meal;
-std::vector <double> benefit;
+std::vector<double> benefit;
+std::vector<double> weight;
 double protein, calorie;
 struct food
 {
@@ -34,9 +35,9 @@ void displayBreakfast()
         std::cout << "Proteins(g) " << protein << '\n';
         benefit.push_back(protein);
         std::cout << "Calories " << calorie << '\n';
+        weight.push_back(calorie);
         std::cout << "-------------------" << '\n';
     }
-    std::cout<<benefit.size()<<std::endl;
     //close file
     bfone.close();
 
@@ -53,6 +54,7 @@ void displayBreakfast()
         std::cout << "Proteins(g) " << protein << '\n';
         benefit.push_back(protein);
         std::cout << "Calories " << calorie << '\n';
+        weight.push_back(calorie);
         std::cout << "-------------------" << '\n';
     }
     //close file
@@ -71,9 +73,10 @@ void displayBreakfast()
         std::cout << "Proteins(g) " << protein << '\n';
         benefit.push_back(protein);
         std::cout << "Calories " << calorie << '\n';
+        weight.push_back(calorie);
         std::cout << "-------------------" << '\n';
     }
-    std::cout<<benefit.size()<<std::endl;
+    std::cout << benefit.size() << std::endl;
     //close file
     bfthree.close();
 }
