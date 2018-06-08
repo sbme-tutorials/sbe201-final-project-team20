@@ -39,7 +39,7 @@ int maxi(std::array<std::array<int, 4>, 6> &array)
     }
     return max;
 }
-void itemss(std::array<std::array<int, 4>, 6> &array, std::array<int, 3> w, int capacity)
+/*void itemss(std::array<std::array<int, 4>, 6> &array, std::array<int, 3> w, int capacity)
 {
     int j = capacity;
     for (int i = 4; i > 0; i--)
@@ -47,10 +47,29 @@ void itemss(std::array<std::array<int, 4>, 6> &array, std::array<int, 3> w, int 
         if (array[i][j] == array[i - 1][j]) //do nothing
             int set = 0;
         else if (array[i][j] > array[i - 1][j])
-            std::cout<< "item =" << i << std::endl;
-        j = j - w[i];
+        {
+            std::cout << "item =" << i << std::endl;
+            j = j - w[i];
+        }
+    }
+}*/
+void selected(std::array<std::array<int, 4>, 6> &array, std::array<int, 3> val, std::array<int, 3> w, int items, int capacity)
+{
+    int Mvalue = maxi(array);
+    int j = capacity;
+    for (int i = items; i > 0 && Mvalue > 0; --i)
+    {
+        if (Mvalue == array[i - 1][j])
+            int ayhaga = 0;
+        else if (Mvalue > array[i - 1][j])
+        {
+            std::cout << "item=" << i << std::endl;
+            Mvalue = Mvalue - val[i - 1];
+            j = j - w[i - 1];
+        }
     }
 }
+
 int main()
 {
 
@@ -72,7 +91,7 @@ int main()
         std::cout << std::endl;
     }
     std::cout << maxi(array) << std::endl;
-    itemss(array,w,capacity);
+    selected(array, val, w, items, capacity);
     /*pick(array,w,items,capacity);
 wanted (array,items,w,capacity);*/
     /*std::string stringo;
