@@ -8,14 +8,9 @@
 std::string meal;
 std::vector<double> Protein, Calorie;
 std::vector<std::string> Meal;
-std::vector<int> Index;
-double protein, calorie;
+double protein, calorie, finalProtein1, finalCalorie1, finalProtein2, finalCalorie2, finalProtein3, finalCalorie3;
 int index;
-struct food
-{
-    std::string foodie;
-    double proteine, caloriee;
-};
+void preparedData(int x, int y, int z);
 
 //Breakfast menu call
 
@@ -225,14 +220,13 @@ void displayVegetables()
 
     while (Vegeta >> index >> meal >> protein >> calorie)
     {
-
         std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        std::cout << "-------------------" << '\n';
         Protein.push_back(protein);
         Calorie.push_back(calorie);
         Meal.push_back(meal);
-        std::cout << "-------------------" << '\n';
     }
     //close file
     Vegeta.close();
@@ -251,10 +245,10 @@ void displayFruits()
         std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        std::cout << "-------------------" << '\n';
         Protein.push_back(protein);
         Calorie.push_back(calorie);
         Meal.push_back(meal);
-        std::cout << "-------------------" << '\n';
     }
     //close file
     Fruit.close();
@@ -306,6 +300,10 @@ void selectedFood(int x)
 
         if (!correction)
             selectedFood(1);
+        else
+        {
+            preparedData(selected1, selected2, selected3);
+        }
     }
 
     else if (x == 2)
@@ -329,6 +327,10 @@ void selectedFood(int x)
 
         if (!correction)
             selectedFood(2);
+        else
+        {
+            preparedData(selected1, selected2, selected3);
+        }
     }
 
     if (x == 3)
@@ -352,6 +354,10 @@ void selectedFood(int x)
 
         if (!correction)
             selectedFood(3);
+        else
+        {
+            preparedData(selected1, selected2, selected3);
+        }
     }
 
     if (x == 4)
@@ -375,6 +381,10 @@ void selectedFood(int x)
 
         if (!correction)
             selectedFood(4);
+        else
+        {
+            preparedData(selected1, selected2, selected3);
+        }
     }
 
     if (x == 5)
@@ -398,6 +408,10 @@ void selectedFood(int x)
 
         if (!correction)
             selectedFood(5);
+        else
+        {
+            preparedData(selected1, selected2, selected3);
+        }
     }
 
     if (x == 6)
@@ -421,5 +435,21 @@ void selectedFood(int x)
 
         if (!correction)
             selectedFood(6);
+        else
+        {
+            preparedData(selected1, selected2, selected3);
+        }
     }
+}
+
+// a function to sum it up and put all acquired data into the 6 global variables
+//preparedData function
+void preparedData(int x, int y, int z)
+{
+    finalProtein1 = Protein[x - 1];
+    finalCalorie1 = Calorie[x - 1];
+    finalProtein2 = Protein[y - 1];
+    finalCalorie2 = Calorie[y - 1];
+    finalProtein3 = Protein[z - 1];
+    finalCalorie3 = Calorie[z - 1];
 }
