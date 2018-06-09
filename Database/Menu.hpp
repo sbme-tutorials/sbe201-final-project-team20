@@ -4,8 +4,10 @@
 #include <string>
 #include <iterator>
 #include <vector>
+#include <cmath>
 //Declaring global variables
-namespace menu{
+namespace menu
+{
 std::string meal;
 std::vector<double> Protein, Calorie;
 std::vector<std::string> Meal;
@@ -442,16 +444,59 @@ void selectedFood(int x)
         }
     }
 }
-
+std::vector<double> values;
+std::vector<double> w;
 // a function to sum it up and put all acquired data into the 6 global variables
 //preparedData function
 void preparedData(int x, int y, int z)
 {
     pr1 = Protein[x - 1];
+    values.push_back(pr1);
     cl1 = Calorie[x - 1];
+    w.push_back(cl1);
     pr2 = Protein[y - 1];
+    values.push_back(pr2);
     cl2 = Calorie[y - 1];
+    w.push_back(cl2);
     pr3 = Protein[z - 1];
+    values.push_back(pr3);
     cl3 = Calorie[z - 1];
+    w.push_back(cl3);
+}
+
+void knapsack(std::array<std::array<double,3>,20 > &array)
+{
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 20; j++)
+        {
+            if (i == 0 || j == 0)
+            {
+                array[i][j] = 0;
+            }
+
+            else if (w[i - 1] > j)
+            {
+                array[i][j] = array[i - 1][j];
+            }
+            else
+                array[i][j] = std::max(array[i - 1][j], values[i - 1] + array[i - 1][j - w[i - 1]]);
+        }
+    }
+}
+double maxi(std::array<std::array<double, 3>, 20> &array)
+{
+    double max = array[0][0];
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 20; j++)
+        {
+            if (array[i][j] > max)
+            {
+                max = array[i][j];
+            }
+        }
+    }
+    return max;
 }
 }

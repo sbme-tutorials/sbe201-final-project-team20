@@ -58,4 +58,23 @@ int main()
         selectedFood(6);
         break;
     }
+    std::array<std::array<double, 3>, 20> array;
+    int calo = 1000;
+    int capacity = .12 * calo;
+    knapsack(array);
+    std::cout << "values=" << maxi(array) << std::endl;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 20; j++)
+        {
+            std::cout << array[i][j] << "  ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << w.size() << std::endl;
+    for (int i = 0; i < 3; i++)
+    {
+        std::cout << w[i] << std::endl;
+    }
+    return 0;
 }
