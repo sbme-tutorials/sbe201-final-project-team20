@@ -6,9 +6,11 @@
 #include <vector>
 //Declaring global variables
 std::string meal;
-std::vector<double> benefit;
-std::vector<double> weight;
+std::vector<double> Protein, Calorie;
+std::vector<std::string> Meal;
+std::vector<int> Index;
 double protein, calorie;
+int index;
 struct food
 {
     std::string foodie;
@@ -28,14 +30,16 @@ void displayBreakfast()
         std::cout << "ERROR: File Open" << '\n';
 
     //while loop passing data to variables
-    while (bfone >> meal >> protein >> calorie)
+    while (bfone >> index >> meal >> protein >> calorie)
     {
         //menu out on screen
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
-        benefit.push_back(protein);
+        //Push all the protein, Calorie values in vectors
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "Calories " << calorie << '\n';
-        weight.push_back(calorie);
         std::cout << "-------------------" << '\n';
     }
     //close file
@@ -47,14 +51,15 @@ void displayBreakfast()
     if (!bftwo.is_open())
         std::cout << "ERROR: File Open" << '\n';
 
-    while (bftwo >> meal >> protein >> calorie)
+    while (bftwo >> index >> meal >> protein >> calorie)
     {
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
-        benefit.push_back(protein);
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "Calories " << calorie << '\n';
-        weight.push_back(calorie);
         std::cout << "-------------------" << '\n';
     }
     //close file
@@ -66,17 +71,18 @@ void displayBreakfast()
     if (!bfthree.is_open())
         std::cout << "ERROR: File Open" << '\n';
 
-    while (bfthree >> meal >> protein >> calorie)
+    while (bfthree >> index >> meal >> protein >> calorie)
     {
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
-        benefit.push_back(protein);
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "Calories " << calorie << '\n';
-        weight.push_back(calorie);
         std::cout << "-------------------" << '\n';
     }
-    std::cout << benefit.size() << std::endl;
+
     //close file
     bfthree.close();
 }
@@ -90,12 +96,15 @@ void displayLunch()
     if (!lunchOne.is_open())
         std::cout << "ERROR: File Open" << '\n';
     //while loop passing data to variables
-    while (lunchOne >> meal >> protein >> calorie)
+    while (lunchOne >> index >> meal >> protein >> calorie)
     {
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "-------------------" << '\n';
     }
 
@@ -106,12 +115,15 @@ void displayLunch()
     if (!lunchTwo.is_open())
         std::cout << "ERROR: File Open" << '\n';
 
-    while (lunchTwo >> meal >> protein >> calorie)
+    while (lunchTwo >> index >> meal >> protein >> calorie)
     {
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "-------------------" << '\n';
     }
     lunchTwo.close();
@@ -121,12 +133,15 @@ void displayLunch()
     if (!lunchThree.is_open())
         std::cout << "ERROR: File Open" << '\n';
 
-    while (lunchThree >> meal >> protein >> calorie)
+    while (lunchThree >> index >> meal >> protein >> calorie)
     {
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "-------------------" << '\n';
     }
 
@@ -145,13 +160,16 @@ void displayDinner()
         std::cout << "ERROR: File Open" << '\n';
 
     //while loop passing data to variables
-    while (dinnerOne >> meal >> protein >> calorie)
+    while (dinnerOne >> index >> meal >> protein >> calorie)
     {
         //menu out on screen
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "-------------------" << '\n';
     }
     //close file
@@ -163,12 +181,15 @@ void displayDinner()
     if (!dinnerTwo.is_open())
         std::cout << "ERROR: File Open" << '\n';
 
-    while (dinnerTwo >> meal >> protein >> calorie)
+    while (dinnerTwo >> index >> meal >> protein >> calorie)
     {
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "-------------------" << '\n';
     }
     //close file
@@ -180,12 +201,15 @@ void displayDinner()
     if (!dinnerThree.is_open())
         std::cout << "ERROR: File Open" << '\n';
 
-    while (dinnerThree >> meal >> protein >> calorie)
+    while (dinnerThree >> index >> meal >> protein >> calorie)
     {
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "-------------------" << '\n';
     }
     //close file
@@ -199,12 +223,15 @@ void displayVegetables()
     if (!Vegeta.is_open())
         std::cout << "ERROR: File Open" << '\n';
 
-    while (Vegeta >> meal >> protein >> calorie)
+    while (Vegeta >> index >> meal >> protein >> calorie)
     {
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "-------------------" << '\n';
     }
     //close file
@@ -218,12 +245,15 @@ void displayFruits()
     if (!Fruit.is_open())
         std::cout << "ERROR: File Open" << '\n';
 
-    while (Fruit >> meal >> protein >> calorie)
+    while (Fruit >> index >> meal >> protein >> calorie)
     {
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "-------------------" << '\n';
     }
     //close file
@@ -237,145 +267,159 @@ void displayDrinks()
     if (!drink.is_open())
         std::cout << "ERROR: File Open" << '\n';
 
-    while (drink >> meal >> protein >> calorie)
+    while (drink >> index >> meal >> protein >> calorie)
     {
 
-        std::cout << meal << '\n';
+        std::cout << index << "- " << meal << '\n';
         std::cout << "Proteins(g) " << protein << '\n';
         std::cout << "Calories " << calorie << '\n';
+        Protein.push_back(protein);
+        Calorie.push_back(calorie);
+        Meal.push_back(meal);
         std::cout << "-------------------" << '\n';
     }
     //close file
     drink.close();
 }
 
-
-
 //SelectedFood Function
 void selectedFood(int x)
 {
     if (x == 1)
     {
-        std::ifstream bfone("Breakfast1.csv");
-
-        //File opened successfully ?
-        if (!bfone.is_open())
-            std::cout << "ERROR: File Open" << '\n';
-
-        std::string selected1, selected2, selected3;
-        std::cout << "Enter desired 3 meals" << std::endl;
+        int selected1, selected2, selected3;
+        std::cout << "Enter desired 3 meals ( Insert their # )" << std::endl;
         std::cin >> selected1;
         std::cin >> selected2;
         std::cin >> selected3;
-        while (bfone >> meal >> protein >> calorie)
+        std::cout << "You choosed " << Meal[selected1 - 1] << ", " << Meal[selected2 - 1] << " and " << Meal[selected3 - 1] << ", Correct ?(Y/N)" << std::endl;
+        bool correction;
+        char correct;
+        std::cin >> correct;
+        if (correct == 'Y' || correct == 'y')
+            correction = true;
+        else
         {
-            if (selected1 == meal)
-            {
-                food firstmeal;
-                firstmeal.foodie = meal;
-                firstmeal.proteine = protein;
-                firstmeal.caloriee = calorie;
-                std::cout << firstmeal.foodie << " " << firstmeal.proteine << " " << firstmeal.caloriee;
-            }
-            while (bfone >> meal >> protein >> calorie)
+            correction = false;
+            std::cout << "Please re-enter your desired 3 meals" << std::endl;
+        }
+
+        if (!correction)
+            selectedFood(1);
+    }
+
+    else if (x == 2)
+    {
+        int selected1, selected2, selected3;
+        std::cout << "Enter desired 3 meals ( Insert their # )" << std::endl;
+        std::cin >> selected1;
+        std::cin >> selected2;
+        std::cin >> selected3;
+        std::cout << "You choosed " << Meal[selected1 - 1] << ", " << Meal[selected2 - 1] << " and " << Meal[selected3 - 1] << ", Correct ?(Y/N)" << std::endl;
+        bool correction;
+        char correct;
+        std::cin >> correct;
+        if (correct == 'Y' || correct == 'y')
+            correction = true;
+        else
         {
-            if (selected2 == meal)
-            {
-                food secondmeal;
-                secondmeal.foodie = meal;
-                secondmeal.proteine = protein;
-                secondmeal.caloriee = calorie;
-                std::cout << secondmeal.foodie << " " << secondmeal.proteine << " " << secondmeal.caloriee;
-            }
+            correction = false;
+            std::cout << "Please re-enter your desired 3 meals" << std::endl;
         }
-            while (bfone >> meal >> protein >> calorie)
+
+        if (!correction)
+            selectedFood(2);
+    }
+
+    if (x == 3)
+    {
+        int selected1, selected2, selected3;
+        std::cout << "Enter desired 3 meals ( Insert their # )" << std::endl;
+        std::cin >> selected1;
+        std::cin >> selected2;
+        std::cin >> selected3;
+        std::cout << "You choosed " << Meal[selected1 - 1] << ", " << Meal[selected2 - 1] << " and " << Meal[selected3 - 1] << ", Correct ?(Y/N)" << std::endl;
+        bool correction;
+        char correct;
+        std::cin >> correct;
+        if (correct == 'Y' || correct == 'y')
+            correction = true;
+        else
         {
-            if (selected3 == meal)
-            {
-                food thirdmeal;
-                thirdmeal.foodie = meal;
-                thirdmeal.proteine = protein;
-                thirdmeal.caloriee = calorie;
-                std::cout << thirdmeal.foodie << " " << thirdmeal.proteine << " " << thirdmeal.caloriee;
-            }
+            correction = false;
+            std::cout << "Please re-enter your desired 3 meals" << std::endl;
         }
-            
-        }
-        //close file
-        bfone.close();
 
-        std::ifstream bftwo("Breakfast2.csv");
+        if (!correction)
+            selectedFood(3);
+    }
 
-        if (!bftwo.is_open())
-            std::cout << "ERROR: File Open" << '\n';
-
-        while (bfone >> meal >> protein >> calorie)
+    if (x == 4)
+    {
+        int selected1, selected2, selected3;
+        std::cout << "Enter desired 3 meals ( Insert their # )" << std::endl;
+        std::cin >> selected1;
+        std::cin >> selected2;
+        std::cin >> selected3;
+        std::cout << "You choosed " << Meal[selected1 - 1] << ", " << Meal[selected2 - 1] << " and " << Meal[selected3 - 1] << ", Correct ?(Y/N)" << std::endl;
+        bool correction;
+        char correct;
+        std::cin >> correct;
+        if (correct == 'Y' || correct == 'y')
+            correction = true;
+        else
         {
-            if (selected1 == meal)
-            {
-                food firstmeal;
-                firstmeal.foodie = meal;
-                firstmeal.proteine = protein;
-                firstmeal.caloriee = calorie;
-                std::cout << firstmeal.foodie << " " << firstmeal.proteine << " " << firstmeal.caloriee;
-            }
-            if (selected2 == meal)
-            {
-                food secondmeal;
-                secondmeal.foodie = meal;
-                secondmeal.proteine = protein;
-                secondmeal.caloriee = calorie;
-                std::cout << secondmeal.foodie << " " << secondmeal.proteine << " " << secondmeal.caloriee;
-            }
-            if (selected3 == meal)
-            {
-                food thirdmeal;
-                thirdmeal.foodie = meal;
-                thirdmeal.proteine = protein;
-                thirdmeal.caloriee = calorie;
-                std::cout << thirdmeal.foodie << " " << thirdmeal.proteine << " " << thirdmeal.caloriee;
-            }
-            else
-                break;
+            correction = false;
+            std::cout << "Please re-enter your desired 3 meals" << std::endl;
         }
-        //close file
-        bftwo.close();
 
-        std::ifstream bfthree("Breakfast3.csv");
+        if (!correction)
+            selectedFood(4);
+    }
 
-        if (!bfthree.is_open())
-            std::cout << "ERROR: File Open" << '\n';
-
-        while (bfthree >> meal >> protein >> calorie)
+    if (x == 5)
+    {
+        int selected1, selected2, selected3;
+        std::cout << "Enter desired 3 meals ( Insert their # )" << std::endl;
+        std::cin >> selected1;
+        std::cin >> selected2;
+        std::cin >> selected3;
+        std::cout << "You choosed " << Meal[selected1 - 1] << ", " << Meal[selected2 - 1] << " and " << Meal[selected3 - 1] << ", Correct ?(Y/N)" << std::endl;
+        bool correction;
+        char correct;
+        std::cin >> correct;
+        if (correct == 'Y' || correct == 'y')
+            correction = true;
+        else
         {
-            if (selected1 == meal)
-            {
-                food firstmeal;
-                firstmeal.foodie = meal;
-                firstmeal.proteine = protein;
-                firstmeal.caloriee = calorie;
-                std::cout << firstmeal.foodie << " " << firstmeal.proteine << " " << firstmeal.caloriee;
-            }
-            if (selected2 == meal)
-            {
-                food secondmeal;
-                secondmeal.foodie = meal;
-                secondmeal.proteine = protein;
-                secondmeal.caloriee = calorie;
-                std::cout << secondmeal.foodie << " " << secondmeal.proteine << " " << secondmeal.caloriee;
-            }
-            if (selected3 == meal)
-            {
-                food thirdmeal;
-                thirdmeal.foodie = meal;
-                thirdmeal.proteine = protein;
-                thirdmeal.caloriee = calorie;
-                std::cout << thirdmeal.foodie << " " << thirdmeal.proteine << " " << thirdmeal.caloriee;
-            }
-            else
-                break;
+            correction = false;
+            std::cout << "Please re-enter your desired 3 meals" << std::endl;
         }
-        //close file
-        bfthree.close();
+
+        if (!correction)
+            selectedFood(5);
+    }
+
+    if (x == 6)
+    {
+        int selected1, selected2, selected3;
+        std::cout << "Enter desired 3 meals ( Insert their # )" << std::endl;
+        std::cin >> selected1;
+        std::cin >> selected2;
+        std::cin >> selected3;
+        std::cout << "You choosed " << Meal[selected1 - 1] << ", " << Meal[selected2 - 1] << " and " << Meal[selected3 - 1] << ", Correct ?(Y/N)" << std::endl;
+        bool correction;
+        char correct;
+        std::cin >> correct;
+        if (correct == 'Y' || correct == 'y')
+            correction = true;
+        else
+        {
+            correction = false;
+            std::cout << "Please re-enter your desired 3 meals" << std::endl;
+        }
+
+        if (!correction)
+            selectedFood(6);
     }
 }
