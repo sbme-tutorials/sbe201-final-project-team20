@@ -9,7 +9,7 @@ namespace menu{
 std::string meal;
 std::vector<double> Protein, Calorie;
 std::vector<std::string> Meal;
-double protein, calorie, finalProtein1, finalCalorie1, finalProtein2, finalCalorie2, finalProtein3, finalCalorie3;
+double protein, calorie, pr1, cl1, pr2, cl2, pr3, cl3;
 int index;
 void preparedData(int x, int y, int z);
 
@@ -447,11 +447,11 @@ void selectedFood(int x)
 //preparedData function
 void preparedData(int x, int y, int z)
 {
-    finalProtein1 = Protein[x - 1];
-    finalCalorie1 = Calorie[x - 1];
-    finalProtein2 = Protein[y - 1];
-    finalCalorie2 = Calorie[y - 1];
-    finalProtein3 = Protein[z - 1];
-    finalCalorie3 = Calorie[z - 1];
+    pr1 = Protein[x - 1];
+    cl1 = Calorie[x - 1];
+    pr2 = Protein[y - 1];
+    cl2 = Calorie[y - 1];
+    pr3 = Protein[z - 1];
+    cl3 = Calorie[z - 1];
 }
 }
