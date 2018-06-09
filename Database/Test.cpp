@@ -62,7 +62,7 @@ int main()
     int calo = 1000;
     int capacity = .12 * calo;
     knapsack(array);
-    std::cout << "values=" << maxi(array) << std::endl;
+    std::cout << "value=" << maxi(array) << std::endl;
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 20; j++)
