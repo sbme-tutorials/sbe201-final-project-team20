@@ -2,7 +2,7 @@
 #include <fstream>
 #include "Menu.hpp"
 #include <stdlib.h>
-
+using namespace menu;
 int main()
 {
     int choice;
