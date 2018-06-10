@@ -61,7 +61,7 @@ int main()
         // cout << "*   what is your Goal ?! [  i want To lose weight = 1 , i want To mainatain my weight = 2 , i want To gain weight = 3 ]  --->   ";
         // cin >> goal;
         //cout << endl;
-        cout << "*   What is your life style ?!  [ little walk = 1 , leight sport 1-3 times per week = 2 , average sport 3-5 times per week = 3, heavy sport 6-7 times per week = 4 --->    ] ";
+        cout << "*   What is your life style ?!  [ Little walks = 1 , Light exercises 1-3 times per week = 2 , Average exercises 3-5 times per week = 3, Hardcore exercises 6-7 times per week = 4 --->    ] ";
         cin >> style;
         cout << endl;
         if (style == 1)
@@ -82,13 +82,13 @@ int main()
         }
         else
         {
-            cout << "*  incorrect choice ";
+            cout << "*  Incorrect choice ";
         }
         cout << endl;
     }
     else
     {
-        cout << "under progress " << endl;
+        cout << "Under progress " << endl;
     }
     if (gender == 1)
     {
@@ -121,7 +121,7 @@ int main()
     cout << endl;
     cout << "                                    menu                        " << endl;
     cout << endl;
-    cout << "          Breakfast -- please choose one from each catogrie -- " << endl;
+    cout << "          Breakfast -- please choose one from each categorie -- " << endl;
     cout << "          _________                         " << endl;
     cout << endl;
     cout << "    CARB.                      PROTEIN                     FAT " << endl;
@@ -204,7 +204,7 @@ int main()
     {
         cout << " wrong choice " << endl;
     }
-    cout << "* Your choosen Breakfast " << endl;
+    cout << "* Your chosen Breakfast " << endl;
     cout << "   ____________________   " << endl;
     cout << "*    " << requiredCarb << " gm  CARB    from number  " << choosecarb << endl;
     cout << "*    " << requiredPro << "  gm  PROTEIN from number  " << choosepro << endl;
