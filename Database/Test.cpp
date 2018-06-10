@@ -98,52 +98,32 @@ int main()
     }
     std::cout << calories << std::endl;
     int capacity = .3 * calories;
-    if (capacity > 200 && capacity < 500)
+    double *arrray[4];
+    for (int row = 0; row < 4; row++)
     {
-        std::array<std::array<double, 3>, 500> array;
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 500; j++)
-            {
-                std::cout << array[i][j] << "  ";
-            }
-            std::cout << std::endl;
-        }
+        arrray[row] = new double[6];
     }
-    else if (capacity > 500 && capacity < 800)
+    std::cout << "capacity =" << capacity << std::endl;
+    knapsack(arrray, values, w, 3, 6);
+    std::cout << "maxi value=" << maxi(arrray) << std::endl;
+    for (int i = 0; i < 4; i++)
     {
-        std::array < std::array<double, 3>, 800 array;
-        for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 6; j++)
         {
-            for (int j = 0; j < 800; j++)
-            {
-                std::cout << array[i][j] << "  ";
-            }
-            std::cout << std::endl;
+            std::cout << arrray[i][j] << "  ";
         }
+        std::cout << std::endl;
     }
-
-    else if (capacity > 800 && capacity < 1000)
+    std::cout << values.size() << std::endl;
+    for (int i = 0; i < 3; i++)
     {
-        std::array<std::array<double, 3>, 1000> array;
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < capacity; j++)
-            {
-                std::cout << array[i][j] << "  ";
-            }
-            std::cout << std::endl;
-        }
+        std::cout << values[i] << std::endl;
     }
-    std::cout << "capacity" << capacity << std::endl;
-    caap(capacity);
-    knapsack(array);
-    std::cout << "value=" << maxi(array) << std::endl;
     std::cout << w.size() << std::endl;
     for (int i = 0; i < 3; i++)
     {
         std::cout << w[i] << std::endl;
     }
-    
+
     return 0;
 }

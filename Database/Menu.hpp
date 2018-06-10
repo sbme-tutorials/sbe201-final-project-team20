@@ -444,8 +444,8 @@ void selectedFood(int x)
         }
     }
 }
-std::vector<double> values;
-std::vector<double> w;
+std::vector<int> values;
+std::vector<int> w;
 // a function to sum it up and put all acquired data into the 6 global variables
 //preparedData function
 void preparedData(int x, int y, int z)
@@ -463,118 +463,32 @@ void preparedData(int x, int y, int z)
     cl3 = Calorie[z - 1];
     w.push_back(cl3);
 }
-int cap;
-void caap(int capacity)
+void knapsack(  double **arrray, std::vector<int> val, std::vector<int> w, int items, int capacity)
 {
-    cap = capacity;
-}
-
-if (cap > 200 && cap < 500)
-{
-    void knapsack(std::array<std::array<double, 3>, 500> & array)
+    for (int i = 0; i < 4; i++)
     {
-        for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 6; j++)
         {
-            for (int j = 0; j < 500; j++)
+            if (i == 0 || j == 0)
             {
-                if (i == 0 || j == 0)
-                {
-                    array[i][j] = 0;
-                }
-
-                else if (w[i - 1] > j)
-                {
-                    array[i][j] = array[i - 1][j];
-                }
-                else
-                    array[i][j] = std::max(array[i - 1][j], values[i - 1] + array[i - 1][j - w[i - 1]]);
+                arrray[i][j] = 0;
             }
-        }
-    }
 
-    double maxi(std::array<std::array<double, 3>, 500> & array)
-    {
-        double max = array[0][0];
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 500; j++)
+            else if (w[i - 1] > j)
             {
-                if (array[i][j] > max)
-                {
-                    max = array[i][j];
-                }
+                arrray[i][j] = arrray[i - 1][j];
             }
+            else
+                arrray[i][j] = std::max(arrray[i - 1][j], val[i - 1] + arrray[i - 1][j - w[i - 1]]);
         }
-        return max;
     }
 }
-else if (cap > 500 && cap < 800)
+int maxi(double **array)
 {
-    void knapsack(std::array<std::array<double, 3>, 800> & array)
+    int max = array[0][0];
+    for (int i = 0; i < 4; i++)
     {
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 800; j++)
-            {
-                if (i == 0 || j == 0)
-                {
-                    array[i][j] = 0;
-                }
-
-                else if (w[i - 1] > j)
-                {
-                    array[i][j] = array[i - 1][j];
-                }
-                else
-                    array[i][j] = std::max(array[i - 1][j], values[i - 1] + array[i - 1][j - w[i - 1]]);
-            }
-        }
-    }
-    double maxi(std::array<std::array<double, 3>, 800> & array)
-    {
-        double max = array[0][0];
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 800; j++)
-            {
-                if (array[i][j] > max)
-                {
-                    max = array[i][j];
-                }
-            }
-        }
-        return max;
-    }
-}
-
-else if (cap > 800 && cap < 1000)
-{
-    void knapsack(std::array<std::array<double, 3>, 1000> & array)
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 1000; j++)
-            {
-                if (i == 0 || j == 0)
-                {
-                    array[i][j] = 0;
-                }
-
-                else if (w[i - 1] > j)
-                {
-                    array[i][j] = array[i - 1][j];
-                }
-                else
-                    array[i][j] = std::max(array[i - 1][j], values[i - 1] + array[i - 1][j - w[i - 1]]);
-            }
-        }
-    }
-double maxi(std::array<std::array<double, 3>, 1000> &array)
-{
-    double max = array[0][0];
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = 0; j < 1000; j++)
+        for (int j = 0; j < 6; j++)
         {
             if (array[i][j] > max)
             {
@@ -583,6 +497,5 @@ double maxi(std::array<std::array<double, 3>, 1000> &array)
         }
     }
     return max;
-}
 }
 }
