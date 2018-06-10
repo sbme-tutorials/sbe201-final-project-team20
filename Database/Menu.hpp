@@ -5,7 +5,8 @@
 #include <iterator>
 #include <vector>
 //Declaring global variables
-namespace menu{
+namespace menu
+{
 std::string meal;
 std::vector<double> Protein, Calorie;
 std::vector<std::string> Meal;
@@ -454,4 +455,4 @@ void preparedData(int x, int y, int z)
     pr3 = Protein[z - 1];
     cl3 = Calorie[z - 1];
 }
-}
+} // namespace menu
