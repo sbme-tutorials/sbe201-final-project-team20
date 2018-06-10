@@ -1,8 +1,3 @@
-/* Code can be dramatically optimized to much less lines, yet we had to solve some problems we faced by expanding the code like double or triple
- it's optimized size, these problems shall be discussed in details during the presentation */
-
-// Including used headers
-//-------------------------------------------------------------------------------------------------------------------------------------------
 #include <iostream>
 #include <fstream>
 #include <map>
@@ -10,31 +5,18 @@
 #include <iterator>
 #include <vector>
 #include <cmath>
-//-------------------------------------------------------------------------------------------------------------------------------------------
-
 //Declaring global variables
 namespace menu
 {
 std::string meal;
-std::vector<double> Protein, Calorie, values, w;
+std::vector<double> Protein, Calorie;
 std::vector<std::string> Meal;
-double protein, calorie;
-int index, cap;
-//-------------------------------------------------------------------------------------------------------------------------------------------
-void displayBreakfast();
-void displayLunch();
-void displayDinner();
-void displayVegetables();
-void displayFruits();
-void displayDrinks();
-void SelectedFood();
+double protein, calorie, pr1, cl1, pr2, cl2, pr3, cl3;
+int index;
 void preparedData(int x, int y, int z);
-void caap(int capacity)
-    //-------------------------------------------------------------------------------------------------------------------------------------------
+//Breakfast menu call
 
-    //Breakfast menu call
-
-    void displayBreakfast()
+void displayBreakfast()
 {
 
     //opening file
@@ -102,8 +84,6 @@ void caap(int capacity)
     bfthree.close();
 }
 
-//-------------------------------------------------------------------------------------------------------------------------------------------
-
 //Lunch menu call
 void displayLunch()
 {
@@ -164,8 +144,6 @@ void displayLunch()
 
     lunchThree.close();
 }
-
-//-------------------------------------------------------------------------------------------------------------------------------------------
 
 //Dinner menu call
 void displayDinner()
@@ -235,8 +213,6 @@ void displayDinner()
     dinnerThree.close();
 }
 
-//-------------------------------------------------------------------------------------------------------------------------------------------
-
 void displayVegetables()
 {
     std::ifstream Vegeta("Vegetables.csv");
@@ -257,8 +233,6 @@ void displayVegetables()
     //close file
     Vegeta.close();
 }
-
-//-------------------------------------------------------------------------------------------------------------------------------------------
 
 void displayFruits()
 {
@@ -282,8 +256,6 @@ void displayFruits()
     Fruit.close();
 }
 
-//-------------------------------------------------------------------------------------------------------------------------------------------
-
 void displayDrinks()
 {
     std::ifstream drink("Drinks.csv");
@@ -305,8 +277,6 @@ void displayDrinks()
     //close file
     drink.close();
 }
-
-//-------------------------------------------------------------------------------------------------------------------------------------------
 
 //SelectedFood Function
 void selectedFood(int x)
@@ -473,19 +443,12 @@ void selectedFood(int x)
         }
     }
 }
-<<<<<<< HEAD
-std::vector<int> values;
+std::vector<double> values;
 std::vector<int> w;
-=======
-
-//-------------------------------------------------------------------------------------------------------------------------------------------
-
->>>>>>> 07f428aae4125e4a7d786468429007f20c8f0b6d
 // a function to sum it up and put all acquired data into the 6 global variables
 //preparedData function
 void preparedData(int x, int y, int z)
 {
-    double pr1, cl1, pr2, cl2, pr3, cl3;
     pr1 = Protein[x - 1];
     values.push_back(pr1);
     cl1 = Calorie[x - 1];
@@ -499,25 +462,11 @@ void preparedData(int x, int y, int z)
     cl3 = Calorie[z - 1];
     w.push_back(cl3);
 }
-<<<<<<< HEAD
-void knapsack(  double **arrray, std::vector<int> val, std::vector<int> w, int items, int capacity)
+void knapsack(  double **arrray, std::vector<double> val, std::vector<int> w, int items, int capacity)
 {
     for (int i = 0; i < 4; i++)
-=======
-
-//-------------------------------------------------------------------------------------------------------------------------------------------
-
-void caap(int capacity)
-{
-    cap = capacity;
-
-
-if (cap > 200 && cap < 500)
-{
-    void knapsack(std::array<std::array<double, 3>, 500> & array)
->>>>>>> 07f428aae4125e4a7d786468429007f20c8f0b6d
     {
-        for (int j = 0; j < 6; j++)
+        for (int j = 0; j < 20; j++)
         {
             if (i == 0 || j == 0)
             {
@@ -538,47 +487,14 @@ int maxi(double **array)
     int max = array[0][0];
     for (int i = 0; i < 4; i++)
     {
-<<<<<<< HEAD
-        for (int j = 0; j < 6; j++)
-=======
-        for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 20; j++)
         {
-            for (int j = 0; j < 1000; j++)
+            if (array[i][j] > max)
             {
-                if (i == 0 || j == 0)
-                {
-                    array[i][j] = 0;
-                }
-
-                else if (w[i - 1] > j)
-                {
-                    array[i][j] = array[i - 1][j];
-                }
-                else
-                    array[i][j] = std::max(array[i - 1][j], values[i - 1] + array[i - 1][j - w[i - 1]]);
+                max = array[i][j];
             }
         }
     }
-    double maxi(std::array<std::array<double, 3>, 1000> & array)
-    {
-        double max = array[0][0];
-        for (int i = 0; i < 3; i++)
->>>>>>> 07f428aae4125e4a7d786468429007f20c8f0b6d
-        {
-            for (int j = 0; j < 1000; j++)
-            {
-                if (array[i][j] > max)
-                {
-                    max = array[i][j];
-                }
-            }
-        }
-        return max;
-    }
+    return max;
 }
-<<<<<<< HEAD
 }
-=======
-}
-} // namespace menu
->>>>>>> 07f428aae4125e4a7d786468429007f20c8f0b6d

@@ -68,7 +68,6 @@ int main()
     std::cin >> z;
     std::cin >> q;
     std::cin >> f;
-    std::cout << "enter your life style 1-little 2- light 3-average 4-heavy" << std::endl;
     if (f == 1)
     {
         e = 1.2;
@@ -101,14 +100,14 @@ int main()
     double *arrray[4];
     for (int row = 0; row < 4; row++)
     {
-        arrray[row] = new double[6];
+        arrray[row] = new double[20];
     }
     std::cout << "capacity =" << capacity << std::endl;
     knapsack(arrray, values, w, 3, 6);
     std::cout << "maxi value=" << maxi(arrray) << std::endl;
     for (int i = 0; i < 4; i++)
     {
-        for (int j = 0; j < 6; j++)
+        for (int j = 0; j < 20; j++)
         {
             std::cout << arrray[i][j] << "  ";
         }
