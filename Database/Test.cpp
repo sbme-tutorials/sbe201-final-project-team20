@@ -2,7 +2,7 @@
 #include <fstream>
 #include "Menu.hpp"
 #include <stdlib.h>
-
+using namespace menu;
 int main()
 {
     int choice;
@@ -58,4 +58,92 @@ int main()
         selectedFood(6);
         break;
     }
+    int x, f, calories;
+    float y, z, q, e;
+    std::cout << "1-male , 2- female" << std::endl;
+    std::cin >> x;
+    std::cout << "height then weight then age " << std::endl;
+    std::cout << " then enter your life style 1-little 2- light 3-average 4-heavy" << std::endl;
+    std::cin >> y;
+    std::cin >> z;
+    std::cin >> q;
+    std::cin >> f;
+    std::cout << "enter your life style 1-little 2- light 3-average 4-heavy" << std::endl;
+    if (f == 1)
+    {
+        e = 1.2;
+    }
+    else if (f == 2)
+    {
+        e = 1.26;
+    }
+
+    else if (f == 3)
+    {
+        e = 1.46;
+    }
+
+    else if (f == 4)
+    {
+        e = 1.61;
+    }
+
+    if (x = 1)
+    {
+        calories = (66 + (13.7 * z) + (5 * y) - (6.8 * q)) * e;
+    }
+    else if (x = 2)
+    {
+        calories = (655 + (9.6 * z) + (1.8 * y) - (4.7 * q)) * e;
+    }
+    std::cout << calories << std::endl;
+    int capacity = .3 * calories;
+    if (capacity > 200 && capacity < 500)
+    {
+        std::array<std::array<double, 3>, 500> array;
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 500; j++)
+            {
+                std::cout << array[i][j] << "  ";
+            }
+            std::cout << std::endl;
+        }
+    }
+    else if (capacity > 500 && capacity < 800)
+    {
+        std::array < std::array<double, 3>, 800 array;
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 800; j++)
+            {
+                std::cout << array[i][j] << "  ";
+            }
+            std::cout << std::endl;
+        }
+    }
+
+    else if (capacity > 800 && capacity < 1000)
+    {
+        std::array<std::array<double, 3>, 1000> array;
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < capacity; j++)
+            {
+                std::cout << array[i][j] << "  ";
+            }
+            std::cout << std::endl;
+        }
+    }
+    std::cout << "capacity" << capacity << std::endl;
+    caap(capacity);
+    knapsack(array);
+    std::cout << "value=" << maxi(array) << std::endl;
+    std::cout << w.size() << std::endl;
+    for (int i = 0; i < 3; i++)
+    {
+        std::cout << w[i] << std::endl;
+    }
+    
+    return 0;
 }
