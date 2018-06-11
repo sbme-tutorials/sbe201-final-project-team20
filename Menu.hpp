@@ -478,9 +478,9 @@ void preparedData(int x, int y, int z)
 
 void knapsack(double **arrray, std::vector<double> val, std::vector<int> w, int items, int capacity)
 {
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < items; i++)
     {
-        for (int j = 0; j < 20; j++)
+        for (int j = 0; j < capacity; j++)
         {
             if (i == 0 || j == 0)
             {
@@ -496,12 +496,12 @@ void knapsack(double **arrray, std::vector<double> val, std::vector<int> w, int 
         }
     }
 }
-int maxi(double **array)
+int maxi(double **array,int capacity)
 {
     int max = array[0][0];
     for (int i = 0; i < 4; i++)
     {
-        for (int j = 0; j < 20; j++)
+        for (int j = 0; j < capacity; j++)
         {
             if (array[i][j] > max)
             {
@@ -511,4 +511,24 @@ int maxi(double **array)
     }
     return max;
 }
+<<<<<<< HEAD:Database/Menu.hpp
+void selected( double **array,std::vector<double> val, std::vector<int> w, int items, int capacity)
+{
+    int Mvalue = maxi(array,capacity);
+    int j = capacity;
+    for (int i = items; i > 0 && Mvalue > 0; --i)
+    {
+        if (Mvalue == array[i - 1][j])
+            int ayhaga = 0;
+        else if (Mvalue > array[i - 1][j])
+        {
+            std::cout << "item=" << i-1 << std::endl;
+            Mvalue = Mvalue - val[i - 1];
+            j = j - w[i - 1];
+        }
+    }
+}
+}
+=======
 } //namespace menu
+>>>>>>> a8c8be2034ace2dc26698dc8ce362c2c53586bb6:Menu.hpp

@@ -1,6 +1,10 @@
 #include <iostream>
 #include <fstream>
+<<<<<<< HEAD:Database/Test.cpp
+#include "Menu.hpp"
+=======
 #include "/home/mustafa/sbe201-final-project-team20/Menu.hpp"
+>>>>>>> a8c8be2034ace2dc26698dc8ce362c2c53586bb6:FATGRINDER.cpp
 #include <stdlib.h>
 using namespace menu;
 int main()
@@ -118,29 +122,34 @@ int main()
     double *arrray[4];
     for (int row = 0; row < 4; row++)
     {
-        arrray[row] = new double[20];
+        arrray[row] = new double[capacity];
     }
-    std::cout << "Capacity =" << capacity << std::endl;
-    knapsack(arrray, values, w, 3, 6);
-    std::cout << "Maxi value=" << maxi(arrray) << std::endl;
+    knapsack(arrray, values, w, 4, capacity);
+    std::cout << "maxi value=" << maxi(arrray,capacity) << std::endl;
     for (int i = 0; i < 4; i++)
     {
-        for (int j = 0; j < 20; j++)
+        for (int j = 0; j < capacity; j++)
         {
             std::cout << arrray[i][j] << "  ";
         }
         std::cout << std::endl;
     }
     std::cout << values.size() << std::endl;
+    std::cout << "values of selected items are" << std::endl;
     for (int i = 0; i < 3; i++)
     {
         std::cout << values[i] << std::endl;
     }
+
     std::cout << w.size() << std::endl;
+    std::cout << "weight of selected items" << std::endl;
     for (int i = 0; i < 3; i++)
     {
         std::cout << w[i] << std::endl;
     }
+    std::cout << "capacity =" << capacity << std::endl;
+    std::cout << "maxi value=" << maxi(arrray,capacity) << std::endl;
+    selected(arrray, values, w, 4, capacity);
 
     return 0;
 }
