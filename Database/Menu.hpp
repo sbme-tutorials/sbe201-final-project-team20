@@ -13,7 +13,7 @@ std::string meal;
 std::vector<double> Protein, Calorie, values;
 std::vector<int> w;
 std::vector<std::string> Meal;
-double protein, calorie, pr1, cl1, pr2, cl2, pr3, cl3;
+double protein, calorie;
 int index;
 //-------------------------------------------------------------------------------------------------------------------------------
 void displayBreakfast();
@@ -460,6 +460,7 @@ void selectedFood(int x)
 //preparedData function
 void preparedData(int x, int y, int z)
 {
+    double pr1, cl1, pr2, cl2, pr3, cl3;
     pr1 = Protein[x - 1];
     values.push_back(pr1);
     cl1 = Calorie[x - 1];
