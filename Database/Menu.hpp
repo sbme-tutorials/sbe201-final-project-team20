@@ -464,9 +464,9 @@ void preparedData(int x, int y, int z)
 }
 void knapsack(  double **arrray, std::vector<double> val, std::vector<int> w, int items, int capacity)
 {
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < items; i++)
     {
-        for (int j = 0; j < 20; j++)
+        for (int j = 0; j < capacity; j++)
         {
             if (i == 0 || j == 0)
             {

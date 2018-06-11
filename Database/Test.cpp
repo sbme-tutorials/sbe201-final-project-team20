@@ -89,7 +89,7 @@ int main()
 
     if (x = 1)
     {
-        calories = (66 + (13.7 * z) + (5 * y) - (6.8 * q)) * e;
+        calories = (66+ (13.7 * z) + (5 * y) - (6.8 * q)) * e;
     }
     else if (x = 2)
     {
@@ -100,14 +100,14 @@ int main()
     double *arrray[4];
     for (int row = 0; row < 4; row++)
     {
-        arrray[row] = new double[20];
+        arrray[row] = new double[capacity];
     }
     std::cout << "capacity =" << capacity << std::endl;
-    knapsack(arrray, values, w, 3, 6);
+    knapsack(arrray, values, w, 4, capacity);
     std::cout << "maxi value=" << maxi(arrray) << std::endl;
     for (int i = 0; i < 4; i++)
     {
-        for (int j = 0; j < 20; j++)
+        for (int j = 0; j < capacity; j++)
         {
             std::cout << arrray[i][j] << "  ";
         }
