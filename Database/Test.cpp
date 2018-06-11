@@ -120,7 +120,7 @@ int main()
     }
 
     std::cout << w.size() << std::endl;
-    std::cout << "wait of selected items" << std::endl;
+    std::cout << "weight of selected items" << std::endl;
     for (int i = 0; i < 3; i++)
     {
         std::cout << w[i] << std::endl;
