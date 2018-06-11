@@ -5,15 +5,27 @@
 #include <iterator>
 #include <vector>
 #include <cmath>
+//-------------------------------------------------------------------------------------------------------------------------------
 //Declaring global variables
 namespace menu
 {
 std::string meal;
-std::vector<double> Protein, Calorie;
+std::vector<double> Protein, Calorie, values;
+std::vector<int> w;
 std::vector<std::string> Meal;
 double protein, calorie, pr1, cl1, pr2, cl2, pr3, cl3;
 int index;
+//-------------------------------------------------------------------------------------------------------------------------------
+void displayBreakfast();
+void displayLunch();
+void displayDinner();
+void displayVegetables();
+void displayFruits();
+void displayDrinks();
+void selectedFood(int x);
 void preparedData(int x, int y, int z);
+void knapsack(double **arrray, std::vector<double> val, std::vector<int> w, int items, int capacity);
+//-------------------------------------------------------------------------------------------------------------------------------
 //Breakfast menu call
 
 void displayBreakfast()
@@ -83,7 +95,7 @@ void displayBreakfast()
     //close file
     bfthree.close();
 }
-
+//-------------------------------------------------------------------------------------------------------------------------------
 //Lunch menu call
 void displayLunch()
 {
@@ -144,7 +156,7 @@ void displayLunch()
 
     lunchThree.close();
 }
-
+//-------------------------------------------------------------------------------------------------------------------------------
 //Dinner menu call
 void displayDinner()
 {
@@ -212,7 +224,7 @@ void displayDinner()
     //close file
     dinnerThree.close();
 }
-
+//-------------------------------------------------------------------------------------------------------------------------------
 void displayVegetables()
 {
     std::ifstream Vegeta("Vegetables.csv");
@@ -233,7 +245,7 @@ void displayVegetables()
     //close file
     Vegeta.close();
 }
-
+//-------------------------------------------------------------------------------------------------------------------------------
 void displayFruits()
 {
     std::ifstream Fruit("Fruits.csv");
@@ -255,7 +267,7 @@ void displayFruits()
     //close file
     Fruit.close();
 }
-
+//-------------------------------------------------------------------------------------------------------------------------------
 void displayDrinks()
 {
     std::ifstream drink("Drinks.csv");
@@ -277,7 +289,7 @@ void displayDrinks()
     //close file
     drink.close();
 }
-
+//-------------------------------------------------------------------------------------------------------------------------------
 //SelectedFood Function
 void selectedFood(int x)
 {
@@ -443,8 +455,7 @@ void selectedFood(int x)
         }
     }
 }
-std::vector<double> values;
-std::vector<int> w;
+//-------------------------------------------------------------------------------------------------------------------------------
 // a function to sum it up and put all acquired data into the 6 global variables
 //preparedData function
 void preparedData(int x, int y, int z)
@@ -462,7 +473,9 @@ void preparedData(int x, int y, int z)
     cl3 = Calorie[z - 1];
     w.push_back(cl3);
 }
-void knapsack(  double **arrray, std::vector<double> val, std::vector<int> w, int items, int capacity)
+//-------------------------------------------------------------------------------------------------------------------------------
+
+void knapsack(double **arrray, std::vector<double> val, std::vector<int> w, int items, int capacity)
 {
     for (int i = 0; i < 4; i++)
     {
@@ -497,4 +510,4 @@ int maxi(double **array)
     }
     return max;
 }
-}
+} //namespace menu
