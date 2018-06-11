@@ -497,4 +497,20 @@ int maxi(double **array)
     }
     return max;
 }
+void selected( double **array,std::vector<double> val, std::vector<int> w, int items, int capacity)
+{
+    int Mvalue = maxi(array);
+    int j = capacity;
+    for (int i = items; i > 0 && Mvalue > 0; --i)
+    {
+        if (Mvalue == array[i - 1][j])
+            int ayhaga = 0;
+        else if (Mvalue > array[i - 1][j])
+        {
+            std::cout << "item=" << i << std::endl;
+            Mvalue = Mvalue - val[i - 1];
+            j = j - w[i - 1];
+        }
+    }
+}
 }
