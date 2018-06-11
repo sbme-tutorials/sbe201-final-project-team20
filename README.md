@@ -33,7 +33,7 @@ sbe201-final-project-team20 created by GitHub Classroom
 
 - Re-modifying Menu.hpp to fit with the knapsack algorithm and building more functions to make the file easier to use and to understand.
 
-- Test the knapsack and successfully run a test on it.
+- Test the knapsack and successfully run it.
 
 - Finally building up the application.
 
@@ -47,6 +47,8 @@ sbe201-final-project-team20 created by GitHub Classroom
 
 - The knapsack arrays wouldn't work due to very large capacities needed to work out the problem, so we had to use the heap and build a dynamic array.
 
+- Cmake failed us due to an error at the last minute, add_excutables() number of arguments is invalid.
+
 ---
 
 **Crucial code segments**
@@ -56,18 +58,22 @@ sbe201-final-project-team20 created by GitHub Classroom
 std::ifstream bfone("Breakfast1.csv");
 // ifstream is for inputing data from the file
 ```
+---
+**Crucial code segments**
 ```c++
 while (bfone >> index >> meal >> protein >> calorie)
 // To loop the file and pass data to variables
 ```
-
+---
+**Crucial code segments**
 ```c++
 Protein.push_back(protein);
 Calorie.push_back(calorie);
 Meal.push_back(meal);
-// pushing variables into vectors of the same tybe
+// pushing variables into vectors of the same type
 ```
-
+---
+**Crucial code segments**
 ```c++
 void displayBreakfast()
  void displayLunch()
@@ -75,7 +81,21 @@ void displayBreakfast()
    void displayVegetables()
     void displayFruits()
      void displayDrinks()
-      void selectedFood(int x)
-       void preparedData(int x, int y, int z)
-        void knapsack(double **arrray, std::vector<double> val, std::vector<int> w, int items, int capacity)
 ```
+---
+**Crucial code segments**
+
+```c++
+void selectedFood(int x)
+```
+---
+**Crucial code segments**
+```c++
+ void preparedData(int x, int y, int z)
+```
+---
+**Crucial code segments**
+```c++
+void knapsack(double **arrray, std::vector<double> val, std::vector<int> w, int items, int capacity)
+```
+---
