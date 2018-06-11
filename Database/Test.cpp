@@ -5,29 +5,56 @@
 using namespace menu;
 int main()
 {
-    int choice;
+    int x, f, calories, choice;
+    double y, z, q, e;
+    std::cout << " ______________Welcome To FAT GRINDER______________" << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << "Enter your gender" << std::endl;
+    std::cout << std::endl;
+    std::cout << "1- Male" << std::endl;
+    std::cout << std::endl;
+    std::cout << "2- Female" << std::endl;
+    std::cin >> x;
+    std::cout << "Enter your Height(CM)" << std::endl;
+    std::cin >> y;
+    std::cout << "Enter your Weight(KG)" << std::endl;
+    std::cin >> z;
+    std::cout << "Enter your Age" << std::endl;
+    std::cin >> q;
+    std::cout << "Enter your type of Activity" << std::endl;
+    std::cout << std::endl;
+    std::cout << "1- Light Intensity Activity (Walking (4KM/Hr))" << std::endl;
+    std::cout << std::endl;
+    std::cout << "2- Moderate Intensity Activities (bicycling (16KM/Hr))" << std::endl;
+    std::cout << std::endl;
+    std::cout << "3- Vigorous Intensity Activities (Easy Jogging)" << std::endl;
+    std::cout << std::endl;
+    std::cout << "4- Hardcore Intensity Activities (Rope Jumping)" << std::endl;
+    std::cin >> f;
+
     std::cout << "-------------------"
               << " Menu "
               << "-------------------" << std::endl;
-    std::cout << " " << std::endl;
+    std::cout << std::endl;
     std::cout << "1- "
               << "Breakfast" << std::endl;
-    std::cout << " " << std::endl;
+    std::cout << std::endl;
     std::cout << "2- "
               << "Lunch" << std::endl;
-    std::cout << " " << std::endl;
+    std::cout << std::endl;
     std::cout << "3- "
               << "Dinner" << std::endl;
-    std::cout << " " << std::endl;
+    std::cout << std::endl;
     std::cout << "4- "
               << "Vegetables" << std::endl;
-    std::cout << " " << std::endl;
+    std::cout << std::endl;
     std::cout << "5- "
               << "Fruits" << std::endl;
-    std::cout << " " << std::endl;
+    std::cout << std::endl;
     std::cout << "6- "
               << "Drinks" << std::endl;
-    std::cout << " " << std::endl;
+    std::cout << std::endl;
 
     std::cin >> choice;
 
@@ -58,16 +85,7 @@ int main()
         selectedFood(6);
         break;
     }
-    int x, f, calories;
-    float y, z, q, e;
-    std::cout << "1-male , 2- female" << std::endl;
-    std::cin >> x;
-    std::cout << "height then weight then age " << std::endl;
-    std::cout << " then enter your life style 1-little 2- light 3-average 4-heavy" << std::endl;
-    std::cin >> y;
-    std::cin >> z;
-    std::cin >> q;
-    std::cin >> f;
+
     if (f == 1)
     {
         e = 1.2;
@@ -102,8 +120,14 @@ int main()
     {
         arrray[row] = new double[capacity];
     }
+<<<<<<< HEAD
     knapsack(arrray, values, w, 4, capacity);
     std::cout << "maxi value=" << maxi(arrray) << std::endl;
+=======
+    std::cout << "Capacity =" << capacity << std::endl;
+    knapsack(arrray, values, w, 3, 6);
+    std::cout << "Maxi value=" << maxi(arrray) << std::endl;
+>>>>>>> 96a5d038ef6299f3afb0faf762b7ac7838e3f80f
     for (int i = 0; i < 4; i++)
     {
         for (int j = 0; j < capacity; j++)
