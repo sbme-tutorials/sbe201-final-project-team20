@@ -496,12 +496,12 @@ void knapsack(double **arrray, std::vector<double> val, std::vector<int> w, int 
         }
     }
 }
-int maxi(double **array)
+int maxi(double **array,int capacity)
 {
     int max = array[0][0];
     for (int i = 0; i < 4; i++)
     {
-        for (int j = 0; j < 20; j++)
+        for (int j = 0; j < capacity; j++)
         {
             if (array[i][j] > max)
             {
@@ -511,10 +511,9 @@ int maxi(double **array)
     }
     return max;
 }
-<<<<<<< HEAD
 void selected( double **array,std::vector<double> val, std::vector<int> w, int items, int capacity)
 {
-    int Mvalue = maxi(array);
+    int Mvalue = maxi(array,capacity);
     int j = capacity;
     for (int i = items; i > 0 && Mvalue > 0; --i)
     {
@@ -529,6 +528,3 @@ void selected( double **array,std::vector<double> val, std::vector<int> w, int i
     }
 }
 }
-=======
-} //namespace menu
->>>>>>> 96a5d038ef6299f3afb0faf762b7ac7838e3f80f

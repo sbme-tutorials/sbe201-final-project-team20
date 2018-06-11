@@ -120,14 +120,8 @@ int main()
     {
         arrray[row] = new double[capacity];
     }
-<<<<<<< HEAD
     knapsack(arrray, values, w, 4, capacity);
-    std::cout << "maxi value=" << maxi(arrray) << std::endl;
-=======
-    std::cout << "Capacity =" << capacity << std::endl;
-    knapsack(arrray, values, w, 3, 6);
-    std::cout << "Maxi value=" << maxi(arrray) << std::endl;
->>>>>>> 96a5d038ef6299f3afb0faf762b7ac7838e3f80f
+    std::cout << "maxi value=" << maxi(arrray,capacity) << std::endl;
     for (int i = 0; i < 4; i++)
     {
         for (int j = 0; j < capacity; j++)
@@ -150,7 +144,7 @@ int main()
         std::cout << w[i] << std::endl;
     }
     std::cout << "capacity =" << capacity << std::endl;
-    std::cout << "maxi value=" << maxi(arrray) << std::endl;
+    std::cout << "maxi value=" << maxi(arrray,capacity) << std::endl;
     selected(arrray, values, w, 4, capacity);
 
     return 0;
