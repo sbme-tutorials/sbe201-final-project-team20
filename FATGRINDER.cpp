@@ -1,6 +1,10 @@
 #include <iostream>
 #include <fstream>
+<<<<<<< HEAD:Database/Test.cpp
 #include "Menu.hpp"
+=======
+#include "/home/mustafa/sbe201-final-project-team20/Menu.hpp"
+>>>>>>> a8c8be2034ace2dc26698dc8ce362c2c53586bb6:FATGRINDER.cpp
 #include <stdlib.h>
 using namespace menu;
 int main()

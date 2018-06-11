@@ -32,7 +32,7 @@ void displayBreakfast()
 {
 
     //opening file
-    std::ifstream bfone("Breakfast1.csv");
+    std::ifstream bfone("/home/mustafa/sbe201-final-project-team20/data/Breakfast1.csv");
 
     //File opened successfully ?
     if (!bfone.is_open())
@@ -55,7 +55,7 @@ void displayBreakfast()
     bfone.close();
 
     //opening file
-    std::ifstream bftwo("Breakfast2.csv");
+    std::ifstream bftwo("/home/mustafa/sbe201-final-project-team20/data/Breakfast2.csv");
 
     if (!bftwo.is_open())
         std::cout << "ERROR: File Open" << '\n';
@@ -75,7 +75,7 @@ void displayBreakfast()
     bftwo.close();
 
     //opening file
-    std::ifstream bfthree("Breakfast3.csv");
+    std::ifstream bfthree("/home/mustafa/sbe201-final-project-team20/data/Breakfast3.csv");
 
     if (!bfthree.is_open())
         std::cout << "ERROR: File Open" << '\n';
@@ -100,7 +100,7 @@ void displayBreakfast()
 void displayLunch()
 {
     //opening file
-    std::ifstream lunchOne("Lunch1.csv");
+    std::ifstream lunchOne("/home/mustafa/sbe201-final-project-team20/data/Lunch1.csv");
     //File opened successfully ?
     if (!lunchOne.is_open())
         std::cout << "ERROR: File Open" << '\n';
@@ -119,7 +119,7 @@ void displayLunch()
 
     lunchOne.close();
 
-    std::ifstream lunchTwo("Lunch2.csv");
+    std::ifstream lunchTwo("/home/mustafa/sbe201-final-project-team20/data/Lunch2.csv");
 
     if (!lunchTwo.is_open())
         std::cout << "ERROR: File Open" << '\n';
@@ -137,7 +137,7 @@ void displayLunch()
     }
     lunchTwo.close();
 
-    std::ifstream lunchThree("Lunch3.csv");
+    std::ifstream lunchThree("/home/mustafa/sbe201-final-project-team20/data/Lunch3.csv");
 
     if (!lunchThree.is_open())
         std::cout << "ERROR: File Open" << '\n';
@@ -162,7 +162,7 @@ void displayDinner()
 {
 
     //opening file
-    std::ifstream dinnerOne("Dinner1.csv");
+    std::ifstream dinnerOne("/home/mustafa/sbe201-final-project-team20/data/Dinner1.csv");
 
     //File opened successfully ?
     if (!dinnerOne.is_open())
@@ -185,7 +185,7 @@ void displayDinner()
     dinnerOne.close();
 
     //opening file
-    std::ifstream dinnerTwo("Dinner2.csv");
+    std::ifstream dinnerTwo("/home/mustafa/sbe201-final-project-team20/data/Dinner2.csv");
 
     if (!dinnerTwo.is_open())
         std::cout << "ERROR: File Open" << '\n';
@@ -205,7 +205,7 @@ void displayDinner()
     dinnerTwo.close();
 
     //opening file
-    std::ifstream dinnerThree("Dinner3.csv");
+    std::ifstream dinnerThree("/home/mustafa/sbe201-final-project-team20/data/Dinner3.csv");
 
     if (!dinnerThree.is_open())
         std::cout << "ERROR: File Open" << '\n';
@@ -227,7 +227,7 @@ void displayDinner()
 //-------------------------------------------------------------------------------------------------------------------------------
 void displayVegetables()
 {
-    std::ifstream Vegeta("Vegetables.csv");
+    std::ifstream Vegeta("/home/mustafa/sbe201-final-project-team20/data/Vegetables.csv");
 
     if (!Vegeta.is_open())
         std::cout << "ERROR: File Open" << '\n';
@@ -248,7 +248,7 @@ void displayVegetables()
 //-------------------------------------------------------------------------------------------------------------------------------
 void displayFruits()
 {
-    std::ifstream Fruit("Fruits.csv");
+    std::ifstream Fruit("/home/mustafa/sbe201-final-project-team20/data/Fruits.csv");
 
     if (!Fruit.is_open())
         std::cout << "ERROR: File Open" << '\n';
@@ -270,7 +270,7 @@ void displayFruits()
 //-------------------------------------------------------------------------------------------------------------------------------
 void displayDrinks()
 {
-    std::ifstream drink("Drinks.csv");
+    std::ifstream drink("/home/mustafa/sbe201-final-project-team20/data/Drinks.csv");
 
     if (!drink.is_open())
         std::cout << "ERROR: File Open" << '\n';
@@ -511,6 +511,7 @@ int maxi(double **array,int capacity)
     }
     return max;
 }
+<<<<<<< HEAD:Database/Menu.hpp
 void selected( double **array,std::vector<double> val, std::vector<int> w, int items, int capacity)
 {
     int Mvalue = maxi(array,capacity);
@@ -528,3 +529,6 @@ void selected( double **array,std::vector<double> val, std::vector<int> w, int i
     }
 }
 }
+=======
+} //namespace menu
+>>>>>>> a8c8be2034ace2dc26698dc8ce362c2c53586bb6:Menu.hpp
